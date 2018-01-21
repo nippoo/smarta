@@ -42,6 +42,7 @@ $(document).ready(function(){
   getBusTimes("490007530S");
   getBusTimes("490009155S");
   getBusTimes("490004174E");
+  getBusTimes("490004991N");
 
     // var d = new Date();
     $('#dashboard').append("Last updated at " + document.lastModified);
