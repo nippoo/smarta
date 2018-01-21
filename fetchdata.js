@@ -18,9 +18,11 @@ $(document).ready(function(){
   function getBusTimes(stopID){
     $.getJSON("https://api.tfl.gov.uk/StopPoint/" + stopID + "/arrivals", function(json) {
 
-      $('#bustimes').append('<h4>' + json[0]["stationName"] + ' towards ' + json[0]["towards"] + '</h4>');
+      var newdiv = $('<div class="bustable"></div>');
 
-      var table = $('<table></table>');
+      newdiv.append('<h4>' + json[0]["stationName"] + ' towards ' + json[0]["towards"] + '</h4>');
+
+      var table = $('<table></table>').appendTo(newdiv);
 
       table.append('<th class="busnumber">Number</th><th class="towards">Destination</th><th class="timeuntil">Time</th>');
 
@@ -35,7 +37,8 @@ $(document).ready(function(){
         timetil = Math.floor(json[i]["timeToStation"] / 60)
         table.append('<tr><td class="busnumber">' + bus_number + '</td class="towards"><td>' + towards + '</td><td class="timeuntil">' + timetil + '</td></tr>' );
       }
-      $('#bustimes').append(table);
+
+      $('#bustimes').append(newdiv);
     });
   };
 
@@ -44,7 +47,7 @@ $(document).ready(function(){
   getBusTimes("490004174E");
   getBusTimes("490004991N");
 
-    // var d = new Date();
-    $('#dashboard').append("Last updated at " + document.lastModified);
+    var d = new Date();
+    $('#dashboard').append("Last updated at " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
 
   });
