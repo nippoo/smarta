@@ -9,7 +9,7 @@ h2{
     width: 313px;
     height: 60px;
     background: url("smarta-logo.png") no-repeat center;
-    background-size: 60%;
+    background-size: 80%;
     text-indent: -9999px;
     }
 
@@ -69,11 +69,6 @@ h2{
 
 #bustimes{
     display: inline-block;
-}
-
-#bustimes h4
-{
-    font-size: 110%;
 }
 
 #bustimes table{
