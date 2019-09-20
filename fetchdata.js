@@ -42,17 +42,17 @@ $(document).ready(function(){
     });
   };
 
-  function getOccupancy(){
-    $.getJSON("https://wifi.huntershome.org:8443/api/login", {
-      username: unifi_u,
-      password: unifi_p,
-      strict: true
-        },  function(json) {
-        $('#dashboard').append(json)
-  })
-  }
+  // function getOccupancy(){
+  //   $.getJSON("https://wifi.huntershome.org:8443/api/login", {
+  //     username: unifi_u,
+  //     password: unifi_p,
+  //     strict: true
+  //       },  function(json) {
+  //       $('#dashboard').append(json)
+  // })
+  // }
 
-  getOccupancy();
+  // getOccupancy();
   getBusTimes("490007530S");
   getBusTimes("490009155S");
   getBusTimes("490004174E");
