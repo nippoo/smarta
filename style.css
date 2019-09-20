@@ -78,8 +78,17 @@ h2{
 
 }
 
-#bustimes table td{
+#bustimes h4
+{
+    font-size: 93%;
+}
+
+#bustimes table th{
     font-size: 90%;
+}
+
+#bustimes table td{
+    font-size: 80%;
 }
 
 .busnumber{
@@ -103,10 +112,11 @@ h2{
 .status
 {
 	font-weight:bold;
+    font-size: 93%;
 }
 
 .desc{
-    font-size: 90%;
+    font-size: 80%;
     padding-left: 18px;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
