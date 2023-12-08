@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $.getJSON("https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status", function(json) {
+  $.getJSON("https://api.tfl.gov.uk/line/mode/tube,overground,dlr,elizabeth-line/status", function(json) {
 
     var table = $('<table></table>')
 
